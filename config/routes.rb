@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   resources :followings, only: [:create]
 
+  get '/about', to: 'pages#about'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

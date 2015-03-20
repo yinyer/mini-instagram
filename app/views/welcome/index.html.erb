@@ -1,19 +1,27 @@
-<h1>Photos</h1>
+  
+  <div class="call-to-action">
+    <div class="buttons">
 
-<%= form_tag photos_path, method: :get do %>
-  <%= label_tag :q, 'Email:' %>
-  <%= text_field_tag :q, '', placeholder: 'Email a buscar' %>
-  <%= submit_tag 'Buscar' %>
-<% end %>
+      <button class="button btn-right"><%= link_to "Mis fotos", mis_fotos_path %> </button>
+      
+      <button class="button btn-right"><%= link_to "Comparte tus fotos", new_photo_path %> </button>
+    </div>
+  </div>
+  <br><br>
+  <h1>Busca Fotos</h1>
+   
+  <%= form_tag photos_path, method: :get do %>
+    <%= label_tag :q, 'Email:' %>
+    <%= text_field_tag :q, '', placeholder: 'Introducir Email' %><br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= submit_tag 'Buscar' %>
+  <% end %>
 
-<br>
+  <br>
 
-<div class="photos">
-  <%= render @photos %>
-</div>
+  <div class="photos">
+    <%= render @photos %>
+  </div>
 
-<div class="call-to-action">
-  <%= link_to "Upload your photo", new_photo_path %>
-  <%= link_to "Mis fotos", mis_fotos_path %>
-</div>
+ 
 
