@@ -32,6 +32,11 @@ gem 'high_voltage'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
+end
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
