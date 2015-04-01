@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  
+
   <div id="sidebar">
     <div id="logo">
       <%= link_to root_path do %>
@@ -27,13 +27,13 @@
       <li><a href="#">Facebook</a></li>
       <li><a href="mailto:gilda@insignia4u.com">Email</a></li>
     </ul>
-    <% if !user_signed_in? %> 
+    <% if !user_signed_in? %>
       <p class="sign_in">Admin Login</p>
     <% end %>
   </div>
 
    <div id="main_content">
-    
+
     <div id="header">
 
       <% if current_user %>
@@ -53,7 +53,7 @@
       <%= link_to 'Help', page_path('help') %>
       <%= link_to 'Contact', page_path('contact') %> -->
     </div>
-    
+
     <div id="page_wrapper">
 
   <% if notice || alert %>
